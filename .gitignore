@@ -1,0 +1,54 @@
+# Build directories
+/build/
+/out/
+/cmake-build-*/
+CMakeFiles/
+
+# CMake cache & generated files
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# IDE - Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+
+# Visual Studio build outputs
+x64/
+Debug/
+Release/
+MinSizeRel/
+RelWithDebInfo/
+ipch/
+
+# CMake / Ninja / Make outputs
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.exe
+*.so
+*.dylib
+
+# CLion / JetBrains
+.idea/
+cmake-build*/
+
+# Code::Blocks
+*.cbp
+*.layout
+
+# Misc
+*.log
+.DS_Store
+Thumbs.db
