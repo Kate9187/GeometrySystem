@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <memory>
 #include <vector>
 #include <cstddef>
@@ -12,17 +12,17 @@ private:
 public:
 	Scene() = default;
 
-	// Запрещаем копирование и присваивание
+	// Р—Р°РїСЂРµС‰Р°РµРј РєРѕРїРёСЂРѕРІР°РЅРёРµ Рё РїСЂРёСЃРІР°РёРІР°РЅРёРµ
 	Scene(const Scene&) = delete;
 	Scene& operator=(const Scene&) = delete;
 
-	// Разрешаем перемещение
+	// Р Р°Р·СЂРµС€Р°РµРј РїРµСЂРµРјРµС‰РµРЅРёРµ
 	Scene(Scene&&) = default;
 	Scene& operator=(Scene&&) = default;
 
-	void addShape(std::unique_ptr<Shape>); // добавление фигуры(владение передаётся сцене)
-	void removeShape(size_t); // удаление фигуры по индексу.
-	void printAllInfo() const; // вывод информации обо всех фигурах.
-	double totalArea() const; // суммарная площадь всех фигур.
+	void addShape(std::unique_ptr<Shape>); // РґРѕР±Р°РІР»РµРЅРёРµ С„РёРіСѓСЂС‹(РІР»Р°РґРµРЅРёРµ РїРµСЂРµРґР°С‘С‚СЃСЏ СЃС†РµРЅРµ)
+	void removeShape(size_t); // СѓРґР°Р»РµРЅРёРµ С„РёРіСѓСЂС‹ РїРѕ РёРЅРґРµРєСЃСѓ.
+	void printAllInfo() const; // РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РѕР±Рѕ РІСЃРµС… С„РёРіСѓСЂР°С….
+	double totalArea() const; // СЃСѓРјРјР°СЂРЅР°СЏ РїР»РѕС‰Р°РґСЊ РІСЃРµС… С„РёРіСѓСЂ.
 };
 

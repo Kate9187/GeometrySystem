@@ -1,4 +1,4 @@
-#include <sstream> 
+п»ї#include <sstream> 
 #include <iomanip> 
 #include "Rectangle.h"
 
@@ -22,8 +22,8 @@ void Rectangle::setVertices(Point3D vA, Point3D vB, Point3D vC, Point3D vD) {
 std::array<Point3D, 4> Rectangle::getVertices() const {
     return { vertexA, vertexB, vertexC, vertexD };
 }
-// Проверяет, что все углы прямоугольника равны 90 градусам
-// Использует скалярное произведение векторов: если dot = 0, угол = 90°
+// РџСЂРѕРІРµСЂСЏРµС‚, С‡С‚Рѕ РІСЃРµ СѓРіР»С‹ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР° СЂР°РІРЅС‹ 90 РіСЂР°РґСѓСЃР°Рј
+// РСЃРїРѕР»СЊР·СѓРµС‚ СЃРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ РІРµРєС‚РѕСЂРѕРІ: РµСЃР»Рё dot = 0, СѓРіРѕР» = 90В°
 bool Rectangle::checkRightAngles(Point3D vA, Point3D vB, Point3D vC, Point3D vD) {
     const double EPSILON = 1e-6;
 

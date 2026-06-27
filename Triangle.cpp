@@ -1,4 +1,4 @@
-#include <algorithm>
+п»ї#include <algorithm>
 #include <cmath>
 #include <sstream> 
 #include <iomanip> 
@@ -20,7 +20,7 @@ void Triangle::setVertices(Point3D vA, Point3D vB, Point3D vC) {
     vertexC = vC;
 }
 
-// Проверяет валидность треугольника: три вершины не должны быть коллинеарны
+// РџСЂРѕРІРµСЂСЏРµС‚ РІР°Р»РёРґРЅРѕСЃС‚СЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°: С‚СЂРё РІРµСЂС€РёРЅС‹ РЅРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РєРѕР»Р»РёРЅРµР°СЂРЅС‹
 bool Triangle::isValidTriangle(Point3D vA, Point3D vB, Point3D vC) {
     const double EPSILON = 1e-6;
 
@@ -45,7 +45,7 @@ double Triangle::area() const {
 
     double s = (a + b + c) / 2.0;
     double value = s * (s - a) * (s - b) * (s - c);
-    return std::sqrt(std::max(0.0, value)); // защита от погрешности вычислений
+    return std::sqrt(std::max(0.0, value)); // Р·Р°С‰РёС‚Р° РѕС‚ РїРѕРіСЂРµС€РЅРѕСЃС‚Рё РІС‹С‡РёСЃР»РµРЅРёР№
 }
 
 double Triangle::perimeter() const {

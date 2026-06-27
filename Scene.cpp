@@ -1,4 +1,4 @@
-#include "Scene.h"
+﻿#include "Scene.h"
 #include <iostream>
 
 void Scene::addShape(std::unique_ptr<Shape> shape)

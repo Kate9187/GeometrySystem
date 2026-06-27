@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <cmath>
 #include <string>
 #include <sstream> 
@@ -9,7 +9,7 @@ struct Point3D {
     double y;
     double z;
 
-    // Расстояние между двумя точками
+    // Р Р°СЃСЃС‚РѕСЏРЅРёРµ РјРµР¶РґСѓ РґРІСѓРјСЏ С‚РѕС‡РєР°РјРё
     double distanceTo(const Point3D& other) const {
         return std::sqrt(
             (x - other.x) * (x - other.x) +
@@ -17,12 +17,12 @@ struct Point3D {
             (z - other.z) * (z - other.z));
     }
 
-    // Скалярное произведение 
+    // РЎРєР°Р»СЏСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ 
     double dot(const Point3D& other) const {
         return x * other.x + y * other.y + z * other.z;
     }
 
-    // Векторное произведение
+    // Р’РµРєС‚РѕСЂРЅРѕРµ РїСЂРѕРёР·РІРµРґРµРЅРёРµ
     Point3D cross(const Point3D& other) const {
         return {
             y * other.z - z * other.y,
@@ -32,7 +32,7 @@ struct Point3D {
     }
 
 
-    // Оператор вычитания 
+    // РћРїРµСЂР°С‚РѕСЂ РІС‹С‡РёС‚Р°РЅРёСЏ 
     Point3D operator-(const Point3D& other) const {
         return { x - other.x, y - other.y, z - other.z };
     }

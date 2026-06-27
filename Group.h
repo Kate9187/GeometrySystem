@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <memory>
 #include <string>
 #include <vector>
@@ -14,17 +14,17 @@ private:
 public:
     Group() = default;
 
-    // Запрещаем копирование
+    // Р—Р°РїСЂРµС‰Р°РµРј РєРѕРїРёСЂРѕРІР°РЅРёРµ
     Group(const Group&) = delete;
     Group& operator=(const Group&) = delete;
 
-    // Разрешаем перемещение
+    // Р Р°Р·СЂРµС€Р°РµРј РїРµСЂРµРјРµС‰РµРЅРёРµ
     Group(Group&&) = default;
     Group& operator=(Group&&) = default;
 
-    void addShape(std::unique_ptr<Shape> shape); //добавление фигуры в группу
-    double area() const override; //сумма площадей дочерних фигур
-    double perimeter() const override; //сумма периметров
+    void addShape(std::unique_ptr<Shape> shape); //РґРѕР±Р°РІР»РµРЅРёРµ С„РёРіСѓСЂС‹ РІ РіСЂСѓРїРїСѓ
+    double area() const override; //СЃСѓРјРјР° РїР»РѕС‰Р°РґРµР№ РґРѕС‡РµСЂРЅРёС… С„РёРіСѓСЂ
+    double perimeter() const override; //СЃСѓРјРјР° РїРµСЂРёРјРµС‚СЂРѕРІ
     std::string info() const override;
 
 };

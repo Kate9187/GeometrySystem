@@ -22,6 +22,9 @@ compile_commands.json
 *.opensdf
 *.cachefile
 
+*.vcxproj
+*.vcxproj.filters
+
 # Visual Studio build outputs
 x64/
 Debug/
