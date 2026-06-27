@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <memory>
 #include <iomanip>
 
@@ -15,7 +15,7 @@ int main()
 
     try
     {
-        // Создание нескольких фигур
+        // РЎРѕР·РґР°РЅРёРµ РЅРµСЃРєРѕР»СЊРєРёС… С„РёРіСѓСЂ
         auto circle = std::make_unique<Circle>(5.0, Point3D{ 0.0, 0.0, 0.0 });
         auto triangle = std::make_unique<Triangle>(
             Point3D{ 0.0, 0.0, 0.0 },
@@ -29,13 +29,13 @@ int main()
             Point3D{ 0.0, 2.0, 0.0 }
         );
 
-        // Добавление фигур в сцену
+        // Р”РѕР±Р°РІР»РµРЅРёРµ С„РёРіСѓСЂ РІ СЃС†РµРЅСѓ
         Scene scene;
         scene.addShape(std::move(circle));
         scene.addShape(std::move(triangle));
         scene.addShape(std::move(rectangle));
 
-        // Создание группы и добавление в неё фигур
+        // РЎРѕР·РґР°РЅРёРµ РіСЂСѓРїРїС‹ Рё РґРѕР±Р°РІР»РµРЅРёРµ РІ РЅРµС‘ С„РёРіСѓСЂ
         auto group = std::make_unique<Group>();
         group->addShape(std::make_unique<Circle>(2.5, Point3D{ 1.0, 1.0, 0.0 }));
         group->addShape(std::make_unique<Rectangle>(
@@ -45,19 +45,19 @@ int main()
             Point3D{ 1.0, 2.0, 0.0 }
         ));
 
-        // Добавление группы как фигуры в сцену
+        // Р”РѕР±Р°РІР»РµРЅРёРµ РіСЂСѓРїРїС‹ РєР°Рє С„РёРіСѓСЂС‹ РІ СЃС†РµРЅСѓ
         scene.addShape(std::move(group));
 
-        // Вывод информации всех фигур
+        // Р’С‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РІСЃРµС… С„РёРіСѓСЂ
         std::cout << "All shapes in scene:" << std::endl;
         scene.printAllInfo();
         std::cout << "Total area of scene: " << scene.totalArea() << std::endl;
 
-        // Удаление одной фигуры из сцены
+        // РЈРґР°Р»РµРЅРёРµ РѕРґРЅРѕР№ С„РёРіСѓСЂС‹ РёР· СЃС†РµРЅС‹
         std::cout << "\nRemoving shape with index 1\n" << std::endl;
         scene.removeShape(1);
 
-        // Повторный вывод информации после удаления
+        // РџРѕРІС‚РѕСЂРЅС‹Р№ РІС‹РІРѕРґ РёРЅС„РѕСЂРјР°С†РёРё РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ
         std::cout << "Scene after removal:" << std::endl;
         scene.printAllInfo();
         std::cout << "Total area of scene: " << scene.totalArea() << std::endl;
